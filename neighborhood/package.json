@@ -1,0 +1,19 @@
+{
+  "name": "bcn-map",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "escape-string-regexp": "^1.0.5",
+    "google-maps-react": "^2.0.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-scripts": "1.1.4",
+    "yarn": "^1.12.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

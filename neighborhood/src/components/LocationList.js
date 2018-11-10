@@ -62,13 +62,13 @@ class LocationList extends Component {
             id = "search-field"
             className = "search-field"
             type = "text"
-            placeholder = "Filter"
+            placeholder = "Find that place Julie was talking about"
             value = { this.state.query } onChange = { this.filterLocations }
             /> <
             ul > { this.state.suggestions && locationlist } <
             /ul> <
             button className = "button"
-            onClick = { this.toggleSuggestions } > Show / Hide Suggestions < /button> <
+            onClick = { this.toggleSuggestions } > Julie Recommends! < /button> <
             /div>
         );
     }

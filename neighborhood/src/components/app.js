@@ -128,7 +128,7 @@ class App extends Component {
         mapview.style.height = window.innerHeight + "px";
         var map = new window.google.maps.Map(mapview, {
             center: {lat: 43.912949, lng: -69.813771},
-            zoom: 18,
+            zoom: 17,
             mapTypeControl: false
         });
 
@@ -195,7 +195,7 @@ class App extends Component {
         var self = this;
         var clientId = "K154A23TLZK5ZFVP3WSTUMHJHTA2ZP2JRTVLAUTAZBZATVD2";
         var clientSecret = "SK2RPIYIF1FZZEQH0P5ZTEB0ZT4IGFKG4EFOKNVXQW5OSVNN";
-        var url = "https://api.foursquare.com/v2/venues/search?client_id=" + clientId + "&client_secret=" + clientSecret + "&v=20130815&ll=" + marker.getPosition().lat() + "," + marker.getPosition().lng() + "&limit=1";
+        var url = "https://api.foursquare.com/v2/venues/search?client_id=" + clientId + "&client_secret=" + clientSecret + "&v=20170617&ll=" + marker.getPosition().lat() + "," + marker.getPosition().lng() + "&limit=1";
         fetch(url)
             .then(
                 function (response) {

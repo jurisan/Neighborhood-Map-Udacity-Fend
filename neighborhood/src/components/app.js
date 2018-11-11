@@ -29,14 +29,7 @@ class App extends Component {
                     'streetAddress': "56 Centre St, Bath, ME 04530"
                 },
                 {
-                    'name': "Starlight Cafe",
-                    'type': "15 Lambard St, Bath, ME 04530",
-                    'latitude': 43.912542,
-                    'longitude': -69.813324,
-                    'streetAddress': "15 Lambard St, Bath, ME 04530"
-                },
-                {
-                    'name': "Library Park",
+                    'name': "Patten Free Library",
                     'type': "890 Washington St, Bath, ME 04530",
                     'latitude': 43.915684,
                     'longitude': -69.815392,
@@ -55,13 +48,6 @@ class App extends Component {
                     'latitude': 43.912917,
                     'longitude': -69.816942,
                     'streetAddress': "804 Washington St, Bath, ME 04530"
-                },
-                {
-                    'name': "Beale Street Barbeque",
-                    'type': "215 Water St, Bath, ME 04530",
-                    'latitude': 43.91,
-                    'longitude': -69815226,
-                    'streetAddress': "215 Water St, Bath, ME 04530"
                 },
                 {
                     'name': "Benjamin F. Packard House Bed & Breakfast",
@@ -104,6 +90,13 @@ class App extends Component {
                     'latitude': 43.943161,
                     'longitude': -69.818435,
                     'streetAddress': "Whiskeag Trail, Bath, ME 04530"
+                },
+                {
+                    'name': "Witch Spring Hill Ice Cream",
+                    'type': "60 State Rd, West Bath, ME 04530",
+                    'latitude': 43.904434,
+                    'longitude': -69.836769,
+                    'streetAddress': "60 State Rd, West Bath, ME 04530"
                 }
             ],
             'map': '',
@@ -206,12 +199,13 @@ class App extends Component {
 
                     response.json().then(function (data) {
                         var location_data = data.response.venues[0];
+                        var name = location_data.name + '<br>';
                         var verified = '<b>Verified Location: </b>' + (location_data.verified ? 'Yes' : 'No') + '<br>';
                         var checkinsCount = '<b>Number of CheckIn: </b>' + location_data.stats.checkinsCount + '<br>';
                         var usersCount = '<b>Number of Users: </b>' + location_data.stats.usersCount + '<br>';
                         var tipCount = '<b>Number of Tips: </b>' + location_data.stats.tipCount + '<br>';
                         var readMore = '<a href="https://foursquare.com/v/'+ location_data.id +'" target="_blank">More on Foursquare Website</a>'
-                        self.state.infowindow.setContent(checkinsCount + usersCount + tipCount + verified + readMore);
+                        self.state.infowindow.setContent(name + checkinsCount + usersCount + tipCount + verified + readMore);
                     });
                 }
             )
@@ -236,8 +230,8 @@ class App extends Component {
             <div>
                 <LocationList key="100" alllocations={this.state.alllocations} openInfoWindow={this.openInfoWindow}
                               closeInfoWindow={this.closeInfoWindow}/>
-                <div id="map"></div>
-            </div>
+            <div id='map'className='col-xs-12 col-md-11 col-lg-9' aria-labelledby='application' aria-label="Map with venues"tabIndex='4'></div>
+                </div>
         );
     }
 }

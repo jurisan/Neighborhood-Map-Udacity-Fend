@@ -24,3 +24,8 @@ A Single Page app using Google API and Foursquare API for markers.
 ### How to Run 
 - Choose the location from 'Find that place Julie was talking about' field
 - Click on Markers to see the detail - foursquare site.
+
+### References 
+- https://developer.foursquare.com/
+- https://developers.google.com/maps/documentation/javascript/
+- https://www.w3schools.com/
